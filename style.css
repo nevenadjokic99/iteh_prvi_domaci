@@ -1,0 +1,202 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dugmePretraga {
+    background-color: #9f6bff;
+    color: white;
+    cursor: pointer;
+}
+
+.dugmePretraga:hover {
+    color: white;
+    background-color: #47ff56;
+}
+
+h1 {
+    color: #42382f;
+    font-size: 2rem;
+    margin-bottom: 2%;
+}
+
+label{
+    color: rgb(38, 0, 255);
+}
+
+.pretragaNakita {
+    background-image: url('../nakit/slike/pozadina2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 7% 0;
+}
+
+.ram {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+
+.img-odziv {
+    width: 100%;
+}
+
+.img-tren {
+    border-radius: 15px;
+}
+
+.nestoDesno {
+    text-align: right;
+}
+
+.nestoCentar {
+    text-align: center;
+}
+
+.txtlevo {
+    text-align: left;
+}
+
+.txtw {
+    color: white;
+}
+
+.wtxt {
+    color: white;
+}
+
+.pozadina {
+    clear: both;
+    float: none;
+}
+
+a {
+    color: #bf9000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #bf9000;
+}
+
+.btn {
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+
+
+h2 {
+    color: #2f3542;
+    font-size: 2rem;
+    margin-bottom: 2%;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.plut {
+    position: relative;
+}
+
+.ftxt {
+    position: absolute;
+    bottom: 50px;
+    left: 40%;
+}
+
+fieldset {
+    border: 1px solid white;
+    margin: 5%;
+    padding: 3%;
+    border-radius: 5px;
+}
+
+/* CSSS za meni */
+
+.kompanija {
+    width: 10%;
+    float: left;
+}
+
+.meniNakit {
+    line-height: 60px;
+}
+
+.meniNakit ul {
+    list-style-type: none;
+}
+
+.meniNakit ul li {
+    display: inline;
+    padding: 1%;
+    font-weight: bold;
+}
+
+/* CSS ya pretragu */
+
+
+
+
+.pretragaNakita input[type="search"] {
+    width: 50%;
+    padding: 1%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+/* CSS za kategorije */
+.kategorije {
+    padding: 4% 0;
+}
+
+.b3 {
+    width: 28%;
+    float: left;
+    margin: 2%;
+}
+
+/* CSS za artikle */
+.artikli {
+    background-color: #ececec;
+    padding: 4% 0;
+}
+
+.artikli-box {
+    width: 43%;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.artikli-slike {
+    width: 20%;
+    float: left;
+}
+
+.artikli-desc {
+    width: 70%;
+    float: left;
+    margin-left: 8%;
+}
+
+
+.artikli-cena {
+    font-size: 1.2rem;
+    margin: 2% 0;
+}
+
+.artikli-cena {
+    font-size: 1rem;
+    color: #747d8c;
+}
+
