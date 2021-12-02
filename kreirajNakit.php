@@ -24,29 +24,46 @@
         </div>
         <div class="row mt-2 pretragaNakita">
             <div class="col-8 bg-light ram">
-                <form action="" method="post" enctype="multipart/form-data" size='300'>
-                     <!-- dodati-->
-                    
+                <form action="./server/nakit/kreiraj.php" method="post" enctype="multipart/form-data" size='300'>
                     <label>Naziv prozvoda</label>
                     <input type="text" required class="form-control" name="nazivProizvoda">
 
                     <label>Gramaža</label>
                     <input type="number" required min="1" max="9" class="form-control" name="gramaža">
                     <label>Kategorija nakita</label> <!--Prsten, orlica, mindjuse....-->
-                    <select id='vrstaaaa' class="form-control" required name='kategorija'>
-
+                    <select id='vrstaaaa' class="form-control" required name='kategorija_id'>
+                        <!-- popunjavanje preko ajaxa-->
                     </select>
                     <label>Slika</label>
-                    <input type="file" required class="form-control" name="detalji">
+                    <input type="file" required class="form-control" name="slika">
                     <label>Detaljniji opis</label>
-                    <textarea required name="detalji" cols="30" rows="5" class="form-control">
-
-                    </textarea>
-                   
+                    <textarea required name="detalji" cols="30" rows="5" class="form-control"> </textarea>
+                    
                     <button class="form-control btn btn-primary mt-2 mb-2 dugmePretraga">Napravi</button>
                 </form>
             </div>
         </div>
     </div>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js" 
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script>
+        $(document).ready(function () {
+         $.getJSON('./server/kategorija/returnEverything.php', function (data) {
+                //putanja do koje treba da se ode
+                console.log(data);
+                if (!data.status) {
+                    alert(data.error);
+                    return;
+                }
+
+                for (let kategorija of data.kolekcija) {  //data je niz svih vrsta koje vraca f-ja vratisve
+                    $('#vrstaaaa').append(`         
+                        <option value='${kategorija.id}'> ${kategorija.naziv} </option>
+                    `)
+                } 
+            })
+        })
+    </script>
 </body>
 </html>
