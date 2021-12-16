@@ -9,16 +9,13 @@
             <div class="meniNakit nestoDesno">
                 <ul>
                     <li>
-                        <a href="index.php">Pocetna</a>
+                        <a href="index.php">Pocetna stranica</a>
                     </li>
                     <li>
-                        <a href="kategorije.php">Kategorije</a>
+                        <a href="kategorije.php">Dodaj kategoriju</a>
                     </li>
                     <li>
-                        <a href="kreirajNakit.php">Nakit</a>
-                    </li>
-                    <li>
-                        <a href="#.php">c</a>
+                        <a href="kreirajNakit.php">Kreiraj svoj nakit</a>
                     </li>
                 </ul>
 

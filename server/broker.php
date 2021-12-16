@@ -6,7 +6,7 @@ class Broker{
     private static $broker;
    
     private function __construct(){
-        $this->mysqli = new mysqli("localhost","root","","nakit");
+        $this->mysqli = new mysqli("localhost","root","","nakiti");
         $this->mysqli->set_charset("utf8");
     }
 
@@ -18,8 +18,7 @@ class Broker{
     }
     public function vratiKolekciju($upit){
         $rezultat=$this->mysqli->query($upit);
-        $response=[]; //prazna kolekcija koju popunjavam pomocu fetch_object (ucitava jedan po jedan red iz baze i ubacuje
-        //u kolekciju rezultat i taj rezlutat vraca kao povratnu vrednost)
+        $response=[];
         if(!$rezultat){
             $response['status']=false;
             $response['error']=$this->mysqli->error;
@@ -32,7 +31,7 @@ class Broker{
         }
         return $response;
     }
-    public function doi($upit){ //dodaj obrisi izmeni
+    public function doi($upit){
         $rezultat=$this->mysqli->query($upit);
         $response=[];
         $response['status']=(!$rezultat)?false:true;

@@ -4,29 +4,19 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.dugmePretraga {
-    background-color: #9f6bff;
-    color: white;
-    cursor: pointer;
-}
-
-.dugmePretraga:hover {
-    color: white;
-    background-color: #47ff56;
-}
-
 h1 {
-    color: #42382f;
+    color: #2b1f46;
     font-size: 2rem;
-    margin-bottom: 2%;
+    
 }
 
 label{
-    color: rgb(38, 0, 255);
+    color: rgb(0, 0, 0) bold;
+    font-size: 1.2rem;
 }
 
 .pretragaNakita {
-    background-image: url('../nakit/slike/pozadina2.jpg');
+    background-image: url('../nakit/slike/pozadina7.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -34,7 +24,7 @@ label{
 }
 
 .ram {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     padding: 1%;
 }
@@ -76,10 +66,11 @@ label{
 a {
     color: #bf9000;
     text-decoration: none;
+    font-size: 1.2rem;
 }
 
 a:hover {
-    color: #bf9000;
+    color: #5565fc;
 }
 
 .btn {
@@ -87,18 +78,28 @@ a:hover {
     border: none;
     font-size: 1rem;
     border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    
+    transition-duration: 0.4s;
+}
+
+
+.btn:hover{
+    background-color: rgb(216, 111, 216);
 }
 
 
 
 h2 {
-    color: #2f3542;
+    color: #2b1f46;
     font-size: 2rem;
     margin-bottom: 2%;
 }
 
 h3 {
     font-size: 1.5rem;
+    color: #2b1f46;
 }
 
 .plut {
@@ -126,7 +127,9 @@ fieldset {
 }
 
 .meniNakit {
-    line-height: 60px;
+    line-height: 110px;
+    background-color: white;
+    
 }
 
 .meniNakit ul {
@@ -139,20 +142,6 @@ fieldset {
     font-weight: bold;
 }
 
-/* CSS ya pretragu */
-
-
-
-
-.pretragaNakita input[type="search"] {
-    width: 50%;
-    padding: 1%;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-}
-
-/* CSS za kategorije */
 .kategorije {
     padding: 4% 0;
 }
@@ -163,7 +152,7 @@ fieldset {
     margin: 2%;
 }
 
-/* CSS za artikle */
+
 .artikli {
     background-color: #ececec;
     padding: 4% 0;
@@ -189,14 +178,27 @@ fieldset {
     margin-left: 8%;
 }
 
-
-.artikli-cena {
-    font-size: 1.2rem;
-    margin: 2% 0;
+p {
+    text-align: center;
+    justify-content: center;
 }
 
-.artikli-cena {
-    font-size: 1rem;
-    color: #747d8c;
+.thumbnail_div {
+    margin:0 auto;
+    text-align: center;
+    background-color:#48bace;
+    
 }
+
+.veliki {
+    
+    margin:0 auto;
+    padding:0px;
+    text-align:center;
+    
+    
+}
+
+
+
 

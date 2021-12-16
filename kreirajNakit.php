@@ -7,17 +7,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Kreiraj</title>
+    
 </head>
 
 <body>
+
     <?php include 'meni.php '; ?>
     <div class='container'>
         <div class='row mt-2 '>
             <h1>Kreiraj svoj nakit</h1>
 
         </div>
-        <div class='row mt-2 bla' <?php echo (!isset($_GET['greska']))?'hidden':''; ?>> <!-- Nadji u klipu -->
+        <div class='row mt-2 bla' <?php echo (!isset($_GET['greska']))?'hidden':''; ?>> 
             <h2 class='text-danger bg-light'>
                 <?php echo $_GET['greska']; ?>
             </h2>
@@ -26,13 +27,13 @@
             <div class="col-8 bg-light ram">
                 <form action="./server/nakit/kreiraj.php" method="post" enctype="multipart/form-data" size='300'>
                     <label>Naziv prozvoda</label>
-                    <input type="text" required class="form-control" name="nazivProizvoda">
+                    <input type="text" required class="form-control" name="ime">
 
                     <label>Gramaža</label>
-                    <input type="number" required min="1" max="9" class="form-control" name="gramaža">
-                    <label>Kategorija nakita</label> <!--Prsten, orlica, mindjuse....-->
+                    <input type="number" required min="1" max="9" class="form-control" name="gramaza">
+                    <label>Kategorija nakita</label> 
                     <select id='vrstaaaa' class="form-control" required name='kategorija_id'>
-                        <!-- popunjavanje preko ajaxa-->
+                     
                     </select>
                     <label>Slika</label>
                     <input type="file" required class="form-control" name="slika">
@@ -44,20 +45,48 @@
             </div>
         </div>
     </div>
+
+    
+    <br>
+    <br>
+
+    <div class="thumbnail_div">
+        <form method="post" action="get_thumbnail.php">
+            <p> <center> nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn </center></p>
+            <input class="form-control" type="text" name="url"  placeholder= "UNESI URL VIDEA">
+           
+            <input class="form-control dugme-pretraga" type="submit"  name="get_thumbnail" value="PREUZMITE SLIKU SA YOUTUBE VIDEA">
+            
+        </form>
+        </div> 
+        
+
+        <br>
+         <br>
+
+    <div id="text_div">
+        <form method="post" action="get_image.php">
+        <input class="form-control" type="text" name="img_url" placeholder="UNESI URL SLIKE">    
+        <input class="form-control dugme-pretraga" type="submit" name="get_image"  value="DODAJ SLIKU U SVOJ RACUNAR">
+</form>
+</div>   
+<br>    
+
+
     <script
   src="https://code.jquery.com/jquery-3.6.0.js" 
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script>
         $(document).ready(function () {
          $.getJSON('./server/kategorija/returnEverything.php', function (data) {
-                //putanja do koje treba da se ode
+                
                 console.log(data);
                 if (!data.status) {
                     alert(data.error);
                     return;
                 }
 
-                for (let kategorija of data.kolekcija) {  //data je niz svih vrsta koje vraca f-ja vratisve
+                for (let kategorija of data.kolekcija) {  
                     $('#vrstaaaa').append(`         
                         <option value='${kategorija.id}'> ${kategorija.naziv} </option>
                     `)
@@ -65,5 +94,6 @@
             })
         })
     </script>
+    
 </body>
 </html>
