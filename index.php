@@ -28,8 +28,8 @@
             <div class="col-3">
                 <select id='sort' class="form-control">
                     <option value="">Sortiraj po nazivu</option>
-                    <option value="ASC">po abecedi</option>
-                    <option value="DESC">unazad</option>
+                    <option value="ASC">Abecedno</option>
+                    <option value="DESC">Unazad</option>
                 </select>
             </div>
             <div class="col-6">
@@ -110,7 +110,7 @@
             let kolona = 0;
             $('#podaci').html(`<div id='row-${red}' class='row mt-2'></div>`)
             for (let nakit of niz) {
-                if (kolona === 4) {
+                if (kolona === 3) {
                     kolona = 0;
                     red++;
                     $('#podaci').append(`<div id='row-${red}' class='row mt-2'></div>`)

@@ -46,31 +46,7 @@
         </div>
     </div>
 
-    
-    <br>
-    <br>
-
-    <div class="thumbnail_div">
-        <form method="post" action="get_thumbnail.php">
-            <p> <center> nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn </center></p>
-            <input class="form-control" type="text" name="url"  placeholder= "UNESI URL VIDEA">
-           
-            <input class="form-control dugme-pretraga" type="submit"  name="get_thumbnail" value="PREUZMITE SLIKU SA YOUTUBE VIDEA">
-            
-        </form>
-        </div> 
-        
-
-        <br>
-         <br>
-
-    <div id="text_div">
-        <form method="post" action="get_image.php">
-        <input class="form-control" type="text" name="img_url" placeholder="UNESI URL SLIKE">    
-        <input class="form-control dugme-pretraga" type="submit" name="get_image"  value="DODAJ SLIKU U SVOJ RACUNAR">
-</form>
-</div>   
-<br>    
+     
 
 
     <script

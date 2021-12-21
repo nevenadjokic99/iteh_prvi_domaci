@@ -10,7 +10,7 @@
   src="https://code.jquery.com/jquery-3.6.0.js" 
  </script>
  <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <?php
@@ -22,6 +22,7 @@
     $broker=Broker::getBroker();
     $rezultat=$broker->vratiKolekciju('select * from nakit where id='.$_GET['id']);
     $nakit=$rezultat['kolekcija'][0];
+   
 ?>
 
 

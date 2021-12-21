@@ -2,7 +2,7 @@
         <div class="ram">
             <div class="kompanija">
                 <a href="#" title="Logo">
-                    <img src="slike/logo.jpg" alt="Logo prodavnice" class="img-odziv">
+                    <img src="slike/logo.png" alt="Logo prodavnice" class="img-odziv">
                 </a>
             </div>
 
